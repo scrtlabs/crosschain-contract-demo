@@ -1,0 +1,180 @@
+crosschain-contract v0.0.1 (/home/toml/newdisk/Dev/junkyard-contract/crosschain-single-codebase)
+├── cosmwasm-std v1.0.0 (/home/toml/newdisk/Dev/cosmwasm/packages/std)
+│   ├── base64 v0.13.1
+│   ├── cosmwasm-crypto v1.0.0 (/home/toml/newdisk/Dev/cosmwasm/packages/crypto)
+│   │   ├── digest v0.9.0
+│   │   │   └── generic-array v0.14.6
+│   │   │       └── typenum v1.16.0
+│   │   │       [build-dependencies]
+│   │   │       └── version_check v0.9.4
+│   │   ├── ed25519-zebra v3.1.0
+│   │   │   ├── curve25519-dalek v3.2.1
+│   │   │   │   ├── byteorder v1.4.3
+│   │   │   │   ├── digest v0.9.0 (*)
+│   │   │   │   ├── rand_core v0.5.1
+│   │   │   │   ├── subtle v2.4.1
+│   │   │   │   └── zeroize v1.3.0
+│   │   │   ├── hashbrown v0.12.3
+│   │   │   │   └── ahash v0.7.6
+│   │   │   │       ├── getrandom v0.2.8
+│   │   │   │       │   ├── cfg-if v1.0.0
+│   │   │   │       │   └── libc v0.2.138
+│   │   │   │       └── once_cell v1.16.0
+│   │   │   │       [build-dependencies]
+│   │   │   │       └── version_check v0.9.4
+│   │   │   ├── hex v0.4.3
+│   │   │   ├── rand_core v0.6.4
+│   │   │   │   └── getrandom v0.2.8 (*)
+│   │   │   ├── serde v1.0.151
+│   │   │   │   └── serde_derive v1.0.151 (proc-macro)
+│   │   │   │       ├── proc-macro2 v1.0.49
+│   │   │   │       │   └── unicode-ident v1.0.6
+│   │   │   │       ├── quote v1.0.23
+│   │   │   │       │   └── proc-macro2 v1.0.49 (*)
+│   │   │   │       └── syn v1.0.107
+│   │   │   │           ├── proc-macro2 v1.0.49 (*)
+│   │   │   │           ├── quote v1.0.23 (*)
+│   │   │   │           └── unicode-ident v1.0.6
+│   │   │   ├── sha2 v0.9.9
+│   │   │   │   ├── block-buffer v0.9.0
+│   │   │   │   │   └── generic-array v0.14.6 (*)
+│   │   │   │   ├── cfg-if v1.0.0
+│   │   │   │   ├── cpufeatures v0.2.5
+│   │   │   │   ├── digest v0.9.0 (*)
+│   │   │   │   └── opaque-debug v0.3.0
+│   │   │   └── zeroize v1.3.0
+│   │   ├── k256 v0.10.4
+│   │   │   ├── cfg-if v1.0.0
+│   │   │   ├── ecdsa v0.13.4
+│   │   │   │   ├── der v0.5.1
+│   │   │   │   │   └── const-oid v0.7.1
+│   │   │   │   ├── elliptic-curve v0.11.12
+│   │   │   │   │   ├── base16ct v0.1.1
+│   │   │   │   │   ├── crypto-bigint v0.3.2
+│   │   │   │   │   │   ├── generic-array v0.14.6 (*)
+│   │   │   │   │   │   ├── rand_core v0.6.4 (*)
+│   │   │   │   │   │   ├── subtle v2.4.1
+│   │   │   │   │   │   └── zeroize v1.3.0
+│   │   │   │   │   ├── der v0.5.1 (*)
+│   │   │   │   │   ├── ff v0.11.1
+│   │   │   │   │   │   ├── rand_core v0.6.4 (*)
+│   │   │   │   │   │   └── subtle v2.4.1
+│   │   │   │   │   ├── generic-array v0.14.6 (*)
+│   │   │   │   │   ├── group v0.11.0
+│   │   │   │   │   │   ├── ff v0.11.1 (*)
+│   │   │   │   │   │   ├── rand_core v0.6.4 (*)
+│   │   │   │   │   │   └── subtle v2.4.1
+│   │   │   │   │   ├── rand_core v0.6.4 (*)
+│   │   │   │   │   ├── sec1 v0.2.1
+│   │   │   │   │   │   ├── der v0.5.1 (*)
+│   │   │   │   │   │   ├── generic-array v0.14.6 (*)
+│   │   │   │   │   │   ├── pkcs8 v0.8.0
+│   │   │   │   │   │   │   ├── der v0.5.1 (*)
+│   │   │   │   │   │   │   ├── spki v0.5.4
+│   │   │   │   │   │   │   │   ├── base64ct v1.5.3
+│   │   │   │   │   │   │   │   └── der v0.5.1 (*)
+│   │   │   │   │   │   │   └── zeroize v1.3.0
+│   │   │   │   │   │   ├── subtle v2.4.1
+│   │   │   │   │   │   └── zeroize v1.3.0
+│   │   │   │   │   ├── subtle v2.4.1
+│   │   │   │   │   └── zeroize v1.3.0
+│   │   │   │   ├── rfc6979 v0.1.0
+│   │   │   │   │   ├── crypto-bigint v0.3.2 (*)
+│   │   │   │   │   ├── hmac v0.11.0
+│   │   │   │   │   │   ├── crypto-mac v0.11.1
+│   │   │   │   │   │   │   ├── generic-array v0.14.6 (*)
+│   │   │   │   │   │   │   └── subtle v2.4.1
+│   │   │   │   │   │   └── digest v0.9.0 (*)
+│   │   │   │   │   └── zeroize v1.3.0
+│   │   │   │   └── signature v1.4.0
+│   │   │   │       ├── digest v0.9.0 (*)
+│   │   │   │       └── rand_core v0.6.4 (*)
+│   │   │   ├── elliptic-curve v0.11.12 (*)
+│   │   │   ├── sec1 v0.2.1 (*)
+│   │   │   └── sha2 v0.9.9 (*)
+│   │   ├── rand_core v0.6.4 (*)
+│   │   └── thiserror v1.0.38
+│   │       └── thiserror-impl v1.0.38 (proc-macro)
+│   │           ├── proc-macro2 v1.0.49 (*)
+│   │           ├── quote v1.0.23 (*)
+│   │           └── syn v1.0.107 (*)
+│   ├── cosmwasm-derive v1.0.0 (proc-macro) (/home/toml/newdisk/Dev/cosmwasm/packages/derive)
+│   │   └── syn v1.0.107 (*)
+│   ├── forward_ref v1.0.0
+│   ├── schemars v0.8.11
+│   │   ├── dyn-clone v1.0.10
+│   │   ├── schemars_derive v0.8.11 (proc-macro)
+│   │   │   ├── proc-macro2 v1.0.49 (*)
+│   │   │   ├── quote v1.0.23 (*)
+│   │   │   ├── serde_derive_internals v0.26.0
+│   │   │   │   ├── proc-macro2 v1.0.49 (*)
+│   │   │   │   ├── quote v1.0.23 (*)
+│   │   │   │   └── syn v1.0.107 (*)
+│   │   │   └── syn v1.0.107 (*)
+│   │   ├── serde v1.0.151 (*)
+│   │   └── serde_json v1.0.91
+│   │       ├── itoa v1.0.5
+│   │       ├── ryu v1.0.12
+│   │       └── serde v1.0.151 (*)
+│   ├── serde v1.0.151 (*)
+│   ├── serde-json-wasm v0.4.1
+│   │   └── serde v1.0.151 (*)
+│   ├── thiserror v1.0.38 (*)
+│   └── uint v0.9.5
+│       ├── byteorder v1.4.3
+│       ├── crunchy v0.2.2
+│       ├── hex v0.4.3
+│       └── static_assertions v1.1.0
+├── schemars v0.8.11 (*)
+├── secp256k1 v0.20.3
+│   └── secp256k1-sys v0.4.2
+│       [build-dependencies]
+│       └── cc v1.0.78
+├── secret-toolkit v0.7.0 (/home/toml/newdisk/Dev/secret-toolkit)
+│   ├── secret-toolkit-serialization v0.7.0 (/home/toml/newdisk/Dev/secret-toolkit/packages/serialization)
+│   │   ├── bincode2 v2.0.1
+│   │   │   ├── byteorder v1.4.3
+│   │   │   └── serde v1.0.151 (*)
+│   │   ├── cosmwasm-std v1.0.0 (https://github.com/scrtlabs/cosmwasm?branch=old-name-std-alias#9b7fef9d)
+│   │   │   ├── base64 v0.13.1
+│   │   │   ├── cosmwasm-crypto v1.0.0 (https://github.com/scrtlabs/cosmwasm?branch=old-name-std-alias#9b7fef9d)
+│   │   │   │   ├── digest v0.9.0 (*)
+│   │   │   │   ├── ed25519-zebra v3.1.0 (*)
+│   │   │   │   ├── k256 v0.10.4 (*)
+│   │   │   │   ├── rand_core v0.6.4 (*)
+│   │   │   │   └── thiserror v1.0.38 (*)
+│   │   │   ├── cosmwasm-derive v1.0.0 (proc-macro) (https://github.com/scrtlabs/cosmwasm?branch=old-name-std-alias#9b7fef9d)
+│   │   │   │   └── syn v1.0.107 (*)
+│   │   │   ├── forward_ref v1.0.0
+│   │   │   ├── schemars v0.8.11 (*)
+│   │   │   ├── serde v1.0.151 (*)
+│   │   │   ├── serde-json-wasm v0.4.1 (*)
+│   │   │   ├── thiserror v1.0.38 (*)
+│   │   │   └── uint v0.9.5 (*)
+│   │   ├── schemars v0.8.11 (*)
+│   │   └── serde v1.0.151 (*)
+│   ├── secret-toolkit-snip20 v0.7.0 (/home/toml/newdisk/Dev/secret-toolkit/packages/snip20)
+│   │   ├── cosmwasm-std v1.0.0 (https://github.com/scrtlabs/cosmwasm?branch=old-name-std-alias#9b7fef9d) (*)
+│   │   ├── schemars v0.8.11 (*)
+│   │   ├── secret-toolkit-utils v0.7.0 (/home/toml/newdisk/Dev/secret-toolkit/packages/utils)
+│   │   │   ├── cosmwasm-std v1.0.0 (https://github.com/scrtlabs/cosmwasm?branch=old-name-std-alias#9b7fef9d) (*)
+│   │   │   ├── cosmwasm-storage v1.0.0 (https://github.com/scrtlabs/cosmwasm?branch=old-name-std-alias#9b7fef9d)
+│   │   │   │   ├── cosmwasm-std v1.0.0 (https://github.com/scrtlabs/cosmwasm?branch=old-name-std-alias#9b7fef9d) (*)
+│   │   │   │   └── serde v1.0.151 (*)
+│   │   │   ├── schemars v0.8.11 (*)
+│   │   │   └── serde v1.0.151 (*)
+│   │   └── serde v1.0.151 (*)
+│   ├── secret-toolkit-snip721 v0.7.0 (/home/toml/newdisk/Dev/secret-toolkit/packages/snip721)
+│   │   ├── cosmwasm-std v1.0.0 (https://github.com/scrtlabs/cosmwasm?branch=old-name-std-alias#9b7fef9d) (*)
+│   │   ├── schemars v0.8.11 (*)
+│   │   ├── secret-toolkit-utils v0.7.0 (/home/toml/newdisk/Dev/secret-toolkit/packages/utils) (*)
+│   │   └── serde v1.0.151 (*)
+│   ├── secret-toolkit-storage v0.7.0 (/home/toml/newdisk/Dev/secret-toolkit/packages/storage)
+│   │   ├── cosmwasm-std v1.0.0 (https://github.com/scrtlabs/cosmwasm?branch=old-name-std-alias#9b7fef9d) (*)
+│   │   ├── cosmwasm-storage v1.0.0 (https://github.com/scrtlabs/cosmwasm?branch=old-name-std-alias#9b7fef9d) (*)
+│   │   ├── secret-toolkit-serialization v0.7.0 (/home/toml/newdisk/Dev/secret-toolkit/packages/serialization) (*)
+│   │   └── serde v1.0.151 (*)
+│   └── secret-toolkit-utils v0.7.0 (/home/toml/newdisk/Dev/secret-toolkit/packages/utils) (*)
+├── serde v1.0.151 (*)
+└── serde-json-wasm v0.2.3
+    └── serde v1.0.151 (*)
