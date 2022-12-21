@@ -20,8 +20,7 @@ use crate::msg::{ExecuteMsg, InstantiateMsg, OptionTally, QueryMsg, QueryRes};
 
 const PAGE_SIZE: usize = 20;
 
-#[cfg_attr(feature = "vanilla", entry_point)]
-#[cfg_attr(feature = "secret", entry_point(secret_std))]
+#[entry_point]
 pub fn instantiate(
     deps: DepsMut,
     _env: Env,
@@ -34,8 +33,7 @@ pub fn instantiate(
     Ok(Response::default())
 }
 
-#[cfg_attr(feature = "vanilla", entry_point)]
-#[cfg_attr(feature = "secret", entry_point(secret_std))]
+#[entry_point]
 pub fn execute(
     deps: DepsMut,
     _env: Env,
@@ -83,8 +81,7 @@ fn vote_impl(deps: DepsMut, info: MessageInfo, option: u64) -> StdResult<Respons
     Ok(Response::default())
 }
 
-#[cfg_attr(feature = "vanilla", entry_point)]
-#[cfg_attr(feature = "secret", entry_point(secret_std))]
+#[entry_point]
 pub fn query(deps: Deps, _env: Env, msg: QueryMsg) -> StdResult<Binary> {
     let res = match msg {
         QueryMsg::Tally {} => QueryRes::Tally {
@@ -123,8 +120,7 @@ fn voters_query_impl(deps: Deps, page: u32) -> StdResult<QueryRes> {
     Ok(QueryRes::Voters { voters: voters })
 }
 
-#[cfg_attr(feature = "vanilla", entry_point)]
-#[cfg_attr(feature = "secret", entry_point(secret_std))]
+#[entry_point]
 pub fn reply(_deps: DepsMut, _env: Env, _reply: Reply) -> StdResult<Response> {
     unimplemented!()
 }
